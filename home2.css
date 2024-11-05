@@ -1,0 +1,86 @@
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: "h h"
+                         "l c"
+                         "f f";
+}
+
+header{
+    grid-area: h;
+    background-color: red;
+}
+
+footer{
+    grid-area: f;
+    background-color: red;
+}
+
+.lateral{
+    grid-area: l;
+    background-image: url("img/pizzalateral.jpg");
+    background-size: 100%;
+    
+}
+
+.container{
+   grid-area: c;
+   background-color: rgb(225, 224, 204);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.texto{
+    background-color: rgb(100, 200, 100);
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    box-shadow: 0 0 5vh 5vh rgba(52, 100, 52, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding-top: 5vh;
+}
+
+.texto>p{
+    width: 80%;
+    text-align: justify;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    padding: 3vh;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    text-decoration: none;
+    background-color: lightgreen;
+    color: white;
+    padding: 3vh;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .lateral{
+        display: none;
+    }
+    body{
+        grid-template-areas: "h h"
+                             "c c"
+                             "f f";
+    }
+    
+}
